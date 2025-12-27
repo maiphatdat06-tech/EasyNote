@@ -7,6 +7,6 @@ import DOMPurify from 'dompurify'
  */
 export const renderMarkdown = (text) => {
   if (!text) return ''
-  const rawHtml = marked.parseSync(text) 
+  const rawHtml = marked.parse(text)
   return DOMPurify.sanitize(rawHtml)
 }
