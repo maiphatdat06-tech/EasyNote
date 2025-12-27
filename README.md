@@ -22,8 +22,7 @@
 ## 📸 项目预览
 
 > **江农大 120 周年校庆灵感卡片**：展示了完美的 Markdown 渲染效果与响应式布局。
-![EasyNote Preview](https://github.com/你的用户名/EasyNote/blob/main/src/assets/preview.png?raw=true) 
-*(注：请将你的预览截图 image_dfadd9.png 放在项目的 assets 文件夹并替换此链接)*
+![EasyNote Preview](https://github.com/你的用户名/EasyNote/blob/main/src/assets/1.png) 
 
 ---
 
