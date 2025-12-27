@@ -19,13 +19,6 @@
 
 ---
 
-## 📸 项目预览
-
-> **江农大 120 周年校庆灵感卡片**：展示了完美的 Markdown 渲染效果与响应式布局。
-![EasyNote Preview](https://github.com/你的用户名/EasyNote/blob/main/src/assets/1.png) 
-
----
-
 ## 📂 模块化工程架构
 
 本项目遵循 **关注点分离 (SoC)** 原则进行了重构，有效规避了标识符冲突问题：
