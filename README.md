@@ -6,6 +6,8 @@
 [![Security](https://img.shields.io/badge/Security-DOMPurify-red)](https://github.com/cure53/dompurify)
 
 一款面向多媒体创作者的轻量级灵感笔记应用。集成了 **Markdown 实时排版**、**数媒滤镜特效**与**企业级安全加固**。
+## 🔗 在线预览
+[点击这里访问我的灵感空间](https://easy-note-chi.vercel.app/)
 
 ---
 
