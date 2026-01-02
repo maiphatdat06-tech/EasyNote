@@ -1,52 +1,36 @@
-# 🎨 EasyNote | 智能灵感空间
+# 🎨 EasyNote | 视觉灵感库 (Visual Inspiration Library)
 
-[![Vue](https://img.shields.io/badge/Vue-3.x-4fc08d?logo=vue.js)](https://vuejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-6.x-646cff?logo=vite)](https://vitejs.dev/)
-[![Security](https://img.shields.io/badge/Security-DOMPurify-red)](https://github.com/cure53/dompurify)
+> 一个基于 Vue 3 + Element Plus 的多媒体灵感收集应用。不仅支持 Markdown 笔记，更支持图片、视频、音频的混合记录与大容量本地存储。
 
-一款面向多媒体创作者的轻量级灵感笔记应用。集成了 **Markdown 实时排版**、**数媒滤镜特效**与**企业级安全加固**。
-## 🔗 在线预览
-[点击这里访问我的灵感空间](https://easy-note-chi.vercel.app/)
+## ✨ 主要特性 (Features)
 
----
+### 1. 多媒体支持 (Multimedia Support) `NEW`
+- **🖼️ 图片上传**：支持图片上传并内置滤镜（复古黄、赛博朋克、黑白）。
+- **🎥 视频集成**：支持上传 MP4 等格式视频，**卡片内自动静音循环播放**，捕捉动态灵感。
+- **🎵 音频记录**：支持上传音频文件，随时回放语音备忘或灵感音乐。
 
-## 🌟 核心特性
+### 2. 强大的本地存储 (IndexedDB Storage) `NEW`
+- **🚀 告别容量焦虑**：底层存储架构已从 `LocalStorage` 迁移至 **原生 IndexedDB**。
+- **💾 大文件存储**：打破了浏览器 5MB 的存储限制，现在可以流畅存储 **几百MB** 的视频或高清素材（取决于硬盘空间）。
+- **⚡ 异步读写**：采用异步数据库操作，确保界面操作流畅不卡顿。
 
-- **📝 富文本排版**：集成 `Marked.js` 解析引擎，支持全语法 Markdown 渲染。
-- **🛡️ 安全加固**：通过 `DOMPurify` 构建 XSS 过滤流水线，确保 `v-html` 渲染内容的安全性。
-- **🎭 视觉滤镜**：利用 CSS3 Filter 实现了包括赛博朋克、复古映画在内的 5 种实时图像处理算法。
-- **🖱️ 智能交互**：采用 **Sticky 粘性定位**与 **JS 定时器**实现的智能隐藏吸顶工具栏，提升沉浸式体验。
-- **💾 健壮存储**：基于 LocalStorage 的数据持久化，并具备完整的 `QuotaExceededError`（空间溢出）异常捕获逻辑。
+### 3. 编辑与交互体验
+- **📝 Markdown 渲染**：集成 `marked.js` 与 `DOMPurify`，支持安全的富文本渲染。
+- **🎨 交互式卡片**：悬停缩放特效、标签分类（学习/生活/代码）、一键增删改。
+- **🔍 实时搜索**：顶部搜索栏支持对标题和内容的实时过滤。
 
----
+## 🛠️ 技术栈 (Tech Stack)
 
-## 📂 模块化工程架构
+- **前端框架**: [Vue 3](https://vuejs.org/) (Composition API / Script Setup)
+- **UI 组件库**: [Element Plus](https://element-plus.org/)
+- **本地数据库**: **Native IndexedDB** (原生封装，无第三方库依赖)
+- **工具库**: 
+  - `marked`: Markdown 解析
+  - `dompurify`: HTML 清洗与安全防护
+- **构建工具**: Vite
 
-本项目遵循 **关注点分离 (SoC)** 原则进行了重构，有效规避了标识符冲突问题：
+## 🚀 快速开始 (Setup)
 
-- **`src/utils/`**: 存放类型安全的 Markdown 解析逻辑。
-- **`src/composables/`**: 封装笔记增删改查及持久化业务逻辑。
-- **`src/components/`**: 拆分 UI 组件，提升代码复用率。
-- **`App.vue`**: 负责全局模块的组合与调度。
-
----
-
-## 🛠️ 技术挑战与解决方案
-
-### 1. 存储溢出优化
-针对 LocalStorage 5MB 限制，通过 `try...catch` 机制解决了 Base64 图片存储导致的 UI 卡死问题，确保应用在极端数据下的稳定性。
-
-### 2. TypeScript 类型安全
-通过 `marked.parseSync` 解决了异步解析导致的类型冲突问题，实现了全链路的静态类型加固。
-
----
-
-## 🚀 快速启动
-
+### 1. 安装依赖
 ```bash
-# 安装依赖
 npm install
-
-# 启动开发服务器
-npm run dev
